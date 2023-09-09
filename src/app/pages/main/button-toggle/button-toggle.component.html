@@ -1,0 +1,57 @@
+<div class="container">
+  <h2>Button-Toggle</h2>
+  <mat-divider></mat-divider>
+
+  <div class="mt-3">
+    <div class="row">
+        <div class="col-md-6">
+            <h5>Ex - 1: Single Button Toggle</h5>
+            
+                <mat-button-toggle #myToggle>{{myToggle.checked ? 'Active' : 'InActive'}}</mat-button-toggle>
+                <br>
+                {{myToggle.checked}}
+        </div>
+        <div class="col-md-6">
+            <h5>Ex - 2: Button Toggle Group</h5>
+            <mat-button-toggle-group #myGrp="matButtonToggleGroup">
+                <mat-button-toggle value="left">Left</mat-button-toggle>
+                <mat-button-toggle value="center">Center</mat-button-toggle>
+                <mat-button-toggle value="right">Right</mat-button-toggle>
+                <mat-button-toggle value="justify">Justify</mat-button-toggle>
+            </mat-button-toggle-group>
+            <br>
+            <p [style.text-align]="myGrp.value">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis optio illum quod qui aspernatur. Deleniti, esse pariatur hic possimus veniam voluptatum eligendi quo, vero harum fugiat accusantium ducimus? Eaque, quasi?</p>
+        </div>
+        <div class="col-md-6">
+            <h5>Ex - 3: Multiple Selection</h5>
+            <mat-button-toggle-group #myGrp2="matButtonToggleGroup" multiple>
+                <mat-button-toggle value="Angular">Angular</mat-button-toggle>
+                <mat-button-toggle value="React">React</mat-button-toggle>
+                <mat-button-toggle value="NodeJS">NodeJS</mat-button-toggle>
+                <mat-button-toggle value="Dot Net">Dot Net</mat-button-toggle>
+            </mat-button-toggle-group>
+            <br>
+            {{myGrp2.value}}
+        </div>
+        <div class="col-md-6">
+            <h5>Ex - 4: Template Driven Form</h5>
+                <mat-button-toggle-group [(ngModel)]="fontStyle" aria-label="Font Style">
+                  <mat-button-toggle value="bold">Bold</mat-button-toggle>
+                  <mat-button-toggle value="italic">Italic</mat-button-toggle>
+                  <mat-button-toggle value="underline">Underline</mat-button-toggle>
+                </mat-button-toggle-group>
+                <p>Chosen value is {{fontStyle}}</p>
+        </div>
+        <div class="col-md-6">
+            <h5>Ex - 5: Reactive Form</h5>
+                <mat-button-toggle-group [formControl]="fontStyleControl" aria-label="Font Style">
+                  <mat-button-toggle value="bold">Bold</mat-button-toggle>
+                  <mat-button-toggle value="italic">Italic</mat-button-toggle>
+                  <mat-button-toggle value="underline">Underline</mat-button-toggle>
+                </mat-button-toggle-group>
+                <p>Chosen value is {{fontStyleControl.value}}</p>
+        </div>
+       
+    </div>
+  </div>
+</div>
