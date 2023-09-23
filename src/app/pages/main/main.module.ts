@@ -6,6 +6,10 @@ import { MatModule } from 'src/app/appMaterialModule/mat.module';
 import { ButtonComponent } from './button/button.component';
 import { ButtonToggleComponent } from './button-toggle/button-toggle.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -14,6 +18,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MainComponent,
     ButtonComponent,
     ButtonToggleComponent,
+    HomeComponent,
+    AboutComponent,
+    ProfileComponent,
+    ContactComponent,
   ],
   imports: [
     CommonModule,

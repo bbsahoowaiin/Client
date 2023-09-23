@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <h2>Components</h2>
   <mat-divider></mat-divider>
 
@@ -17,4 +17,16 @@
       </div>
     </div>
   </div>
+</div> -->
+
+<div class="container sub-header">
+  <ul class="nav nav-bar bg-dark">
+    <li class="nav-item"><a routerLink="home" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}" class="nav-link text-white">HOME</a></li>
+    <li class="nav-item"><a routerLink="about" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}" class="nav-link text-white">ABOUT</a></li>
+    <li class="nav-item"><a routerLink="contact" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}" class="nav-link text-white">CONTACT</a></li>
+    <li class="nav-item"><a routerLink="profile" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}" class="nav-link text-white">PROFILE</a></li>
+  </ul>
+  <div>
+    <router-outlet></router-outlet>
+  </div>  
 </div>
